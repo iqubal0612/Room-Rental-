@@ -10,7 +10,7 @@ const Bookings = () => {
   const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = useState("");
   const {
-    userDetails: { bookings },
+    userDetails: { bookings = [] },
   } = useContext(UserDetailContext);
 
   if (isError) {
